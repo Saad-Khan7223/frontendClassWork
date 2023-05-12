@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    header{
+    width: 100%;
+    height: 50vh;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    } 
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div>
+            <h1>Introduction</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, harum dolor, officia inventore culpa neque ea quia iste non laboriosam nisi blanditiis quam. Fugiat molestiae, sunt obcaecati distinctio similique, provident reprehenderit maxime autem dolor beatae unde ut ab nulla repellat?</p>
+            <!-- <a href="#" onclick="clickme()"> Click</a> -->
+            <a id="a1" href="#"> Click</a>
+        </div>
+    </header>
+    <script>
+        //--------------------- 1st way
+       /* const header=document.getElementById("header");
+        const clickme = () =>{
+        header.style.backgroundColor = "#fec";
+        //console.log("abnd");
+       }
+        //--------------------- 2nd way
+        const head1=document.getElementById("header");
+        const anchor=document.getElementById("a1")
+        const clickme_viaanchor = () =>{
+        header.style.backgroundColor = "#eef";
+       
+       }
+       anchor.onclick = clickme_viaanchor;*/
+
+       //---------------------------- 3rd way
+       const h1 = document.querySelector("header");
+       const link = document.querySelector("header a");
+        // link.addEventListener("click",function(){
+
+        //     h1.style.backgroundColor ="red";
+
+            
+        // })
+        const clickme = () =>{
+        header.style.backgroundColor = "purple";
+      
+       }
+       link.addEventListener("click",clickme );
+
+
+    </script>
+</body>
+</html>

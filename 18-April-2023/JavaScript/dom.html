@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container
+        {
+            display: flex;
+
+            background-color: aqua;
+
+        }
+        .font
+        {
+
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .item1
+        {
+            background-color: brown;
+            padding: 30px;
+        }
+        .forecolor1
+        {
+            color:violet;
+
+        }
+
+        .forecolor2
+        {
+            color:blue;
+
+        }
+
+        .backcolor
+        {
+            color:whitesmoke;
+
+        }
+
+    </style>
+</head>
+<body>
+    <header class="container" id="container">
+        <div class="forecolor1">
+        <h1 id="heading1">Introduction to HTML</h1>
+        <p>Hyper text markup Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde illum, rem quasi dolor consectetur provident aut ratione perferendis delectus! Qui ipsam numquam modi dolorem laboriosam possimus ratione accusantium et hic.</p>
+        <br>
+        <a id="google" href="www.google.com">Google</a>
+        </div> 
+        <div class="item1 font forecolor1" onclick="abc()">
+        <h1 id="heading2">Introduction to Python</h1>
+           
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde illum, rem quasi dolor consectetur provident aut ratione perferendis delectus! Qui ipsam numquam modi dolorem laboriosam possimus ratione accusantium et hic.</p>
+        <a id="yahoo" href="www.yahoo.com">yahoo</a>
+    </div>
+<div>
+        <h1 id="heading3">Introduction to JavaProgramming</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde illum, rem quasi dolor consectetur provident aut ratione perferendis delectus! Qui ipsam numquam modi dolorem laboriosam possimus ratione accusantium et hic.</p>
+        <a id="gmail" class="gmail" href="www.gamil.com">Gmail</a>
+    </div>
+        </header>
+        <script>
+        
+            // var heading = document.getElementById('heading3');
+            // console.log(heading);
+
+            // var paragraph = document.getElementsByTagName("p")[2];
+            // console.log(paragraph);
+
+            // var contain= document.getElementsByClassName("container");
+            // console.log(contain);
+
+            // var t1= document.getElementsByClassName("item1 font");
+            // console.log(t1);
+
+        //   let data=  document.getElementById("container");
+        //   var d1 = data.getElementsByClassName("item1");
+        //   console.log(d1);
+
+        // let links = document.querySelector(".font");
+        // console.log(links);
+       
+
+        // let data = document.querySelectorAll("a")[1];
+        // console.log(data);
+
+        //-------------------- working with classlist
+            // var d1 = document.querySelector("header div").classList;
+            // console.log(d1.item(1));
+
+            var d2 = document.querySelector(".item1").classList;
+            //console.log(d2.add("forecolor"));
+            //console.log(d2.remove('font'));
+            //console.log(d2.contains('font'));
+            // console.log(d2.length);
+            // var d3 = document.querySelector(".forecolor1").classList;
+            // console.log(d3.replace("forecolor1","forecolor2"));
+
+            function abc()
+            {
+            var d4 = document.querySelector(".item1").classList;
+            console.log(d4.toggle("backcolor"));
+            }
+
+
+
+</script>
+</body>
+</html>

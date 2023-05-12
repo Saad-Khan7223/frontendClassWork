@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1 class="logo">ADVENTURE</h1>
+       <ul class="nav-links">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Tour</a></li>
+        <li><a href="#">Explore</a></li>
+        <li><a href="#">About</a></li>
+        <li class="ctn"><a href="#">Contact</a></li>
+       </ul>
+       <img src="images/menu.png" alt="menubar" class="menubtn" onclick="btntoggle()">
+    
+    </nav>
+    <header>
+        
+        <div class="header-content">
+            <h2>Explore The Colorful World</h2>
+            <div class="line"></div>
+            <h1>A wonderful gift</h1>
+            <a href="#" class="ctn">Learn More</a>
+        </div>
+    </header>
+<section class="events">
+    <div class="title">
+        <h1>Upcoming Events</h1>
+        <div class="line"></div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <img src="images/image1.jpg" alt=""/>
+            <h4>Everest Camp Trek</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis facilis repellendus a praesentium iure asperiores reiciendis magni! Reiciendis, dignissimos quo? A autem, unde provident minus exercitationem sit qui cum quasi!</p>
+           <a href="" class="ctn">Learn More</a>
+        </div>
+        <div class="col">
+            <img src="images/image2.jpg" alt="" />
+            <h4>Walking Holidays</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis facilis repellendus a praesentium iure asperiores reiciendis magni! Reiciendis, dignissimos quo? A autem, unde provident minus exercitationem sit qui cum quasi!</p>
+           <a href="" class="ctn">Learn More</a>
+        </div>
+
+    </div>
+</section>
+
+<section class="footer">
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime fugiat excepturi, rerum doloremque perspiciatis dolores nemo atque asperiores, </p>
+    <p>Copyright © 2023 Outdoot Advanture</p>
+</section>
+
+
+<script>
+    var navlinks= document.querySelector(".nav-links");
+        function btntoggle()
+        {
+
+            navlinks.classList.toggle('menutoggle');
+        }
+</script>
+
+
+
+
+   
+</body>
+</html>

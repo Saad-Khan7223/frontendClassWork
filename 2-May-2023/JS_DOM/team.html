@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="textimonial-text">
+        <div class="user-text">
+            <i class="fa-solid fa-quote-left"></i>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi vero laborum asperiores voluptatem quidem, optio ab, tempora ex quisquam earum libero maxime, soluta accusamus. ab, tempora ex quisquam earum libero maxime, soluta accusamus.</p>
+            <span>David Wese</span>
+        </div>
+
+
+        <div class="user-text">
+            <i class="fa-solid fa-quote-left"></i>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi vero laborum asperiores voluptatem quidem, optio ab, tempora ex quisquam earum libero maxime, soluta accusamus. ab, tempora ex quisquam earum libero maxime, soluta accusamus.</p>
+            <span>Jac Kelvin</span>
+        </div>
+        <div class="user-text active-text">
+            <i class="fa-solid fa-quote-left"></i>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi vero laborum asperiores voluptatem quidem, optio ab, tempora ex quisquam earum libero maxime, soluta accusamus. ab, tempora ex quisquam earum libero maxime, soluta accusamus.</p>
+            <span>Jessica martin</span>
+        </div>
+
+        <div class="user-text">
+            <i class="fa-solid fa-quote-left"></i>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi vero laborum asperiores voluptatem quidem, optio ab, tempora ex quisquam earum libero maxime, soluta accusamus. ab, tempora ex quisquam earum libero maxime, soluta accusamus.</p>
+            <span>Sara David</span>
+        </div>
+
+        <div class="user-text">
+            <i class="fa-solid fa-quote-left"></i>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi vero laborum asperiores voluptatem quidem, optio ab, tempora ex quisquam earum libero maxime, soluta accusamus. ab, tempora ex quisquam earum libero maxime, soluta accusamus.</p>
+            <span>Tom Miller</span>
+        </div>
+        
+    
+    </div>
+
+        <div class="testimonial-pic">
+
+            <img src="images/user1.png" alt="" class="user-pic" onclick="showteam()">
+            <img src="images/user2.png" alt="" class="user-pic active-pic"  onclick="showteam()">
+            <img src="images/user4.png" alt="" class="user-pic"  onclick="showteam()">
+            <img src="images/user5.png" alt="" class="user-pic"  onclick="showteam()">
+            <img src="images/user3.png" alt="" class="user-pic"  onclick="showteam()">
+        </div>
+
+    </div>
+
+    <script>
+        function showteam(){
+        let text = document.getElementsByClassName("user-text");
+        let picture = document.getElementsByClassName("user-pic");
+
+        for( a of text)
+        {
+            a.classList.remove("active-text");
+        }
+        for( b of picture)
+        {
+            b.classList.remove("active-pic");
+        }
+        let i = Array.from(picture).indexOf(event.target);
+       // console.log(i);
+       text[i].classList.add("active-text");
+       picture[i].classList.add("active-pic");
+        }
+    </script>
+</body>
+</html>

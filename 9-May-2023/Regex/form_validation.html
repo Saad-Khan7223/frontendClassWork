@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Signup</h1>
+        <form action="#" name="fm" method="get">
+            <table class="table">
+                <tr>
+                    <td>
+                        <input type="text" class="form-control" placeholder="Username" id="txtname" name="txtname">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" class="form-control" placeholder="Password" id="txtpass" name="txtpass">
+                        <span id="lb2"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="email" class="form-control" placeholder="Email"  id="txtemail" name="txtemail">
+                        <span id="lb3"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" class="btn btn-info" onclick="validate()" value="Submit">
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+        <div class="popup" id="popup">
+            <img src="images/tick.png" alt="">
+            <h2>Thank You</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam fugit aliquid omnis esse dolorem aliquam quos, tempore odit error quidem!</p>
+            <button type="button" onclick="closePopup()">OK</button>
+     </div>
+    </div>
+    <script>
+       var popup= document.getElementById("popup");
+        function validate(){
+          var username=  fm.txtname.value;
+          var pass=  fm.txtpass.value;
+          var email=  fm.txtemail.value;
+          if(username.length == 0 )
+          {
+                document.getElementById("txtname").style.borderColor = "red";
+          }
+          else{
+            document.getElementById("txtname").style.borderColor = "black";
+          }
+          //-------------------------------- 
+          var pattern_pass = /^[a-zA-Z]\w{3,14}$/;
+          if(pass.length == 0 )
+          {
+                document.getElementById("txtpass").style.borderColor = "red";
+          }
+         
+          else if(pattern_pass.test(pass) == false)
+          {
+                document.getElementById("lb2").innerHTML = "1st letter must be alphabet and min length is 4 max is 14";
+          }
+
+          else{
+            document.getElementById("lb2").innerHTML = "";
+            document.getElementById("txtpass").style.borderColor = "black";
+          }
+          //--------------------------------
+          var pattern_email = /^([A-Za-z0-9_\-\.])+\@([A-Za-z])+\.([A-Za-z]{2,3})$/
+          if(pass.length == 0 )
+          {
+                document.getElementById("txtemail").style.borderColor = "red";
+          }
+          else if(pattern_email.test(email) == false)
+          {
+                document.getElementById("lb3").innerHTML = "invalid email";
+          }
+          else{
+            document.getElementById("lb3").innerHTML = "";
+            document.getElementById("txtemail").style.borderColor = "black";
+          }
+          if(username.length != 0 &&  pattern_pass.test(pass) == true && pattern_email.test(email) == true)
+          {
+            // window.location.href = "thankyou.html";
+            popup.classList.add("open-popup");
+
+          }
+        }
+        function closePopup(){
+            popup.classList.remove("open-popup");
+        }
+
+
+    </script>
+</body>
+</html>

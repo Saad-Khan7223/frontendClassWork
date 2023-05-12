@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //----------------- if -else
+      /*  var num1 = 05,num2=12;
+        if(num1>num2)
+        {
+document.write(num1," is greater then ",num2);
+        }
+        else{
+            document.write(num1," is less then ",num2);
+        }*/
+
+//---------------------------------
+        var eng=17,maths=18,phys=67,chem=78,urdu=14;
+        var obtain_marks = eng+maths+phys+chem+urdu;
+        var per = (obtain_marks*100)/500;
+        document.write("Obtain marks is :",obtain_marks);document.write("<br>");
+        document.write("Obtain marks is :",per,"%");document.write("<br>");
+        if(per>=80 && per<=100)
+        {
+            document.write("A+1");
+        }
+        else if(per>=70 && per<80)
+        {
+            document.write("A");
+        }
+        else if(per>=60 && per<70)
+        {.
+            document.write("B");
+        }
+        else if(per>=50 && per<60)
+        {
+            document.write("C");
+        }
+        else if(per>=40 && per<50)
+        {
+            document.write("D");
+        }
+        else{
+            document.write("Fail:((((");
+        }
+        document.write("<br>");
+       //--------------------------------- voting system
+      /* var age = 34
+       if(age>=18)
+       {
+        document.write("You are elgible for vote casting");document.write("<br>");
+        var cnic = "yes";
+        if(cnic == "yes")
+        {
+            document.write("cnic holder please proceed to room no 04");
+
+        }
+        else{
+            document.write("no cnic please go back to your home");
+        }
+
+
+       }
+       else{
+
+        document.write("You are not elgible for vote casting");
+
+       }*/
+       //----------------------- switch cases
+       var day = "uesday";
+       switch(day)
+       {
+        case "Monday":
+            document.write("1st day of week");
+        break;
+   
+        case "Tuesday":
+            document.write("2nd day of week");
+        break;
+
+        case "Wednesday":
+            document.write("3rd day of week");
+        break;
+     
+        case "Thurday":
+            document.write("4th day of week");
+        break;
+    
+        case "Friday":
+            document.write("5th day of week");
+        break;
+        case "Saturday":
+            document.write("6th day of week");
+        break;
+        case "Sunday":
+            document.write("7th day of week");
+        break;
+        default:
+        document.write("no case match");
+        break;
+       }
+    </script>
+</body>
+</html>

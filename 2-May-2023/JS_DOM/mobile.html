@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="xyz()">
+    <script>
+        var product = new Array("Iphone","Samsung","Real Me","Oppo","One+");
+        var des = new Array("Lorem Corrupti, sequi.","Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, sequi.","2011b3 Corrupti, sequi.","Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, sequi.","Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, sequi.");
+        var images = new Array("images/iphone.jfif","images/samsung.jpg","images/realme.png","images/oppo.jfif","images/one.jpg");
+        function Mobileinfo(x)
+        {
+            let dropdown= document.getElementById("combo");
+            let a = document.createElement("option");
+            a.text = x;
+            a.value =x;
+            dropdown.add(a);
+        }
+        function xyz()
+        {
+            for(var i=0;i<product.length;i++)
+            {
+                Mobileinfo(product[i])
+            }
+        }
+        function function_chg()
+        {
+           var index= document.getElementById("combo").selectedIndex;
+           document.getElementById("title").innerHTML = product[index];
+           document.getElementById("description").innerHTML = des[index];
+           document.getElementById("image").src = images[index];
+        }
+
+    </script>
+    <div class="conatiner">
+    <select name="combo" id="combo" onchange="function_chg()"></select>
+    <h1 id="title"></h1>
+    <p id="description"></p>
+
+    <img src="" alt="" id="image">
+  </div>
+
+
+</body>
+</html>

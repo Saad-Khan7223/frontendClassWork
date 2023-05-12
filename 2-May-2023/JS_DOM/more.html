@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+        width: 100%;
+        height: 50vh;
+        background-color: aqua;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        } 
+        </style>
+</head>
+<body>
+
+    <header id="header">
+        <div>
+            <h1>Java</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, harum dolor, officia inventore culpa neque ea quia iste non laboriosam nisi blanditiis quam. Fugiat molestiae, sunt obcaecati distinctio similique, provident reprehenderit maxime autem dolor beatae unde ut ab nulla repellat?</p>
+            <!-- <a href="#" onclick="clickme()"> Click</a> -->
+            <a id="a1" href="#" > Click</a>
+        </div>
+    </header>
+
+    <script>
+        //one element one event multiple function
+      let header = document.querySelector("header");
+      let anchor = document.querySelector("header a");
+      let para = document.querySelector("header p");
+      const f1_backcolor = ()=>{
+        header.style.backgroundColor= "#fae";
+        para.style.color= "red";
+        console.log("mouseleave")
+
+      }
+    //   const f2_forecolor = ()=>{
+    //     para.style.color= "red";
+
+    //   }
+    //   anchor.onclick= f1_backcolor;
+    //   anchor.onclick= f2_forecolor;
+    // anchor.addEventListener("click",f1_backcolor);
+    // anchor.addEventListener("click",f2_forecolor);
+
+    anchor.addEventListener("click",f1_backcolor);
+    anchor.addEventListener("mouseenter",f1_backcolor);
+    </script>
+</body>
+</html>

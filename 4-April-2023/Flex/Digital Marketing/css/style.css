@@ -1,0 +1,136 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+header{
+    display: flex;
+    height: 100px;
+    justify-content: space-around;
+    align-items: center;
+}
+ul
+{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+   
+}
+ul li a{
+    text-decoration: none;
+    padding: 10px 20px;
+    color: #444242;
+   display: inline-block;
+}
+li a::after{
+    content: '';
+    height: 5px;
+    width: 0;
+    display: block;
+    background-color: rgb(36, 139, 139);
+    transition: all .5s;
+}
+li a:hover::after{
+    width: 100%;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left-content
+{
+    width: 30%;
+}
+.digital
+{
+    width: 650px;
+    height: auto;
+}
+main h1{
+    color:  rgb(86, 84, 190);
+    font-size: 60px;
+    text-transform: uppercase;
+}
+main h2{
+    color:  rgb(209, 211, 113);
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+}
+main p{
+  margin-top: 10px;
+  text-align: justify;
+  padding-right: 10px;
+  font-weight: 700;
+  color: #8d8989;
+  line-height: 25px;
+}
+.btn
+{
+background-color: rgb(86, 84, 190);
+padding: 20px 40px;
+border-radius: 50px;
+outline: none;
+border: none;
+margin-top: 10px;
+color: #fff;
+}
+.btn:hover{
+    background-color: rgb(7, 7, 34);
+
+}
+.sign-in
+{
+background-color: rgb(86, 84, 190);
+padding: 10px 20px;
+border-radius: 50px;
+outline: none;
+border: none;
+
+color: #fff;
+}
+.logo img{
+    width: 250px;
+}
+/* ---------------------------------- gallery */
+.gallery
+{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+
+}
+.gallery h1{
+    font-size: 60px;
+    text-transform: uppercase;
+    color: #8480c2;
+}
+.row
+{
+    display: flex;
+    gap: 10px;
+    margin: 10px 20px;
+}
+
+.col
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.col img{
+    width: 450px;
+    height: auto;
+    border-radius: 50px;
+    opacity: 0.5;
+}
+.col img:hover{
+    opacity: 1;
+}
